@@ -1,6 +1,6 @@
 import { AppState } from "../AppState.js";
 // import { snack } from "../models/SnackModel.js";
-import { SnacksService } from "../services/SnacksService.js";
+import { snacksService } from "../services/SnacksService.js";
 //NOTE I need to import the services here
 
 export class SnacksController {
@@ -11,13 +11,13 @@ export class SnacksController {
     drawSnacksImg() {
         const snacks = AppState.snacks
         let content = ''
-        snacks.forEach(snack => content += snack.imgUrl)
-        console.log('found snack', snack)
+        snacks.forEach(snack => content += snack.snackImg)
         document.getElementById('snack-view').innerHTML = content
+
     }
     selectCurrentSnack(imgUrl) {
         console.log('Selected Snack', imgUrl);
-        SnacksService.selectCurrentSnack(imgUrl)
+        snacksService.selectCurrentSnack(imgUrl)
     }
 
 }
