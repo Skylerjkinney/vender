@@ -8,9 +8,8 @@ class SnacksService {
         console.log('🍭', selectedSnack)
     }
     addMoney(amount) {
-        let currentMoney = AppState.money
-        currentMoney += amount
+        AppState.money += amount
     }
 }
 
-export const snacksService = new SnacksService  
+export const snacksService = new SnacksService()  

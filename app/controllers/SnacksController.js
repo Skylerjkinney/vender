@@ -13,7 +13,12 @@ export class SnacksController {
         let content = ''
         snacks.forEach(snack => content += snack.snackImg)
         document.getElementById('snack-view').innerHTML = content
-
+    }
+    addToBank() {
+        snacksService.addMoney(.25)
+        let bank = AppState.money
+        document.getElementById("bank").innerText = bank
+        console.log('bank')
     }
     selectCurrentSnack(imgUrl) {
         console.log('Selected Snack', imgUrl);
