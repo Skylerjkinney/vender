@@ -9,6 +9,10 @@ class SnacksService {
     }
     addMoney(amount) {
         AppState.money += amount
+        console.log(AppState.money)
+    }
+    buySnack(amount) {
+        if (AppState.money >= )
     }
 }
 

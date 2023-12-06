@@ -5,7 +5,7 @@ import { snacksService } from "../services/SnacksService.js";
 
 export class SnacksController {
     constructor() {
-        console.log('snacks eaten in controller')
+        console.log('SnacksController loaded')
         this.drawSnacksImg()
     }
     drawSnacksImg() {
